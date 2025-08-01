@@ -106,4 +106,4 @@ RofiSel=$(
         -config "quickapps"
 )
 
-[[ -n "${RofiSel}" ]] && gtk-launch "$RofiSel" &
+[[ -n "${RofiSel}" ]] && app2unit -- "$RofiSel" &

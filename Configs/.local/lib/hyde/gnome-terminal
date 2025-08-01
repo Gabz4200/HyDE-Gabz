@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This is a wrapper script to be use by gtk-launch and other gtk stuff
+# This is a wrapper script to be use by app2unit -- and other gtk stuff
 # that is expecting users to ALWAYS use the "gnome-terminal" command.
 # -- The HyDE Project --
 
@@ -14,7 +14,7 @@ term=${term:-kitty}
 
 $term "$@"
 cat <<NOTICE
-Note: This is a wrapper script to be use by gtk-launch 
+Note: This is a wrapper script to be use by app2unit -- 
         and other gtk stuff that is expecting users to 
         ALWAYS use the \"gnome-terminal\" command."
 

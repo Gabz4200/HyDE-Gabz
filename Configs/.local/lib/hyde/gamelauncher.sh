@@ -135,7 +135,7 @@ EOF
   [ -z "$CHOICE" ] && exit 0
   SLUG=$(jq -r --arg choice "$CHOICE" '.[] | select(.name == $choice).slug' "${meta_data}")
   notify-send -a "HyDE Alert" -i "${icon_path}/${SLUG}.jpg" "Launching ${CHOICE}..."
-  exec xdg-open "lutris:rungame/${SLUG}"
+  exec app2unit-open-scope "lutris:rungame/${SLUG}"
 }
 
 # Handle if flatpak or pkgmgr

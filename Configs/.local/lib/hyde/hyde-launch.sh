@@ -103,20 +103,20 @@ main() {
 
     [ -z "$mime_type" ] && {
         echo -e "Error: No matching MIME type found for $input\n"
-        gtk-launch "${fallbackCmd}" || exit 1
+        app2unit -- "${fallbackCmd}" || exit 1
     }
 
     local default_app
     default_app=$(xdg-mime query default "$mime_type")
     [ -z "$default_app" ] && {
         echo -e "Error: No default application found for $mime_type\n"
-        gtk-launch "${fallbackCmd}" || exit 1
+        app2unit -- "${fallbackCmd}" || exit 1
     }
 
     if [ "${std_only}" = true ]; then
         echo "${default_app}"
     else
-        gtk-launch "${default_app}" || gtk-launch "${fallbackCmd}"
+        app2unit -- "${default_app}" || app2unit -- "${fallbackCmd}"
     fi
 }
 main "$@"

@@ -168,7 +168,7 @@ class BookmarkManager:
         if browser:
             subprocess.run([browser, url])
         else:
-            subprocess.run(["xdg-open", url])
+            subprocess.run(["app2unit-open-scope", url])
 
     def open_by_selection(self, selection, bookmarks, browser=None):
         import sys
@@ -184,7 +184,7 @@ class BookmarkManager:
 
 def main():
     parser = argparse.ArgumentParser(description="Bookmarks manager (feature parity with bookmarks.sh)")
-    parser.add_argument('--browser', '-b', type=str, help='Set browser command (default: $BROWSER env or xdg-open)')
+    parser.add_argument('--browser', '-b', type=str, help='Set browser command (default: $BROWSER env or app2unit-open-scope)')
     parser.add_argument('--no-custom', action='store_true', help='Run without custom .lst bookmark files')
     parser.add_argument('--list', action='store_true', help='List bookmarks and exit')
     parser.add_argument('selection', nargs='?', type=str, help='Selected bookmark string from rofi (e.g. "1) Title")')

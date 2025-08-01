@@ -108,7 +108,7 @@
       "workflows-select": "hyde-shell workflows --select;pkill -RTMIN+19 waybar",
       "shaders-select": "hyde-shell shaders --select;pkill -RTMIN+19 waybar",
       "keybinds-hint":"hyde-shell keybinds_hint",
-      "about-hyde": "xdg-open https://hydeproject.pages.dev"
+      "about-hyde": "app2unit-open-scope https://hydeproject.pages.dev"
     }
   }
   

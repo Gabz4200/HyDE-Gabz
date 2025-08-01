@@ -64,7 +64,7 @@ pkgChk+=("${SYSMONITOR_COMMANDS[@]}")                                           
 [ -n "${SYSMONITOR_EXECUTE}" ] && pkgChk=("${SYSMONITOR_EXECUTE}" "${pkgChk[@]}") # Add the user defined executable
 
 for sysMon in "${!pkgChk[@]}"; do
-  if gtk-launch "${pkgChk[sysMon]}"; then
+  if app2unit -- "${pkgChk[sysMon]}"; then
     pid=$(pgrep -n -f "${pkgChk[sysMon]}")
     echo "${pid}:::${pkgChk[sysMon]}" >"$pidFile" # Save the PID to the file
     break

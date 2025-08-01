@@ -109,8 +109,8 @@ handle_query() {
         printf "Using browser: %s %s\n" "$BROWSER" "${SITES[$site]}$query"
         nohup "$BROWSER" "${SITES[$site]}$query" >/dev/null 2>&1 &
     else
-        printf "Using default browser: xdg-open %s\n" "${SITES[$site]}$query"
-        [ -z "$BROWSER" ] && nohup xdg-open "${SITES[$site]}$query" >/dev/null 2>&1 &
+        printf "Using default browser: app2unit-open-scope %s\n" "${SITES[$site]}$query"
+        [ -z "$BROWSER" ] && nohup app2unit-open-scope "${SITES[$site]}$query" >/dev/null 2>&1 &
     fi
 }
 
