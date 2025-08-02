@@ -14,3 +14,9 @@ NetworkManager|root|enable --now
 bluetooth|root|enable --now
 sddm|root|enable
 hyde-config|user|start|
+syncthing|user|enable --now|
+preload|root|enable --now|
+scx_loader|root|enable --now|
+auto-cpufreq|root|enable --now|
+intel-undervolt|root|enable --now|
+intel-undervolt-loop|root|enable --now|
