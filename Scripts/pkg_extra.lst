@@ -9,6 +9,9 @@ ddcui                                                  # GUI to control brightne
 # hyprgui-bin                                          # GUI for hyprland configuration // might mess your userprefs but convenient // Just disappeared
 # power-profiles-daemon                                # for managing power profiles from waybar
 
+uwsm
+app2unit-git
+
 # --------------------------------------------------- // Shell
 
 
